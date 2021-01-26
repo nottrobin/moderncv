@@ -1,3 +1,7 @@
+Release: next
+- Systematize colors and make them user adjustable. See documentation for details. 
+  this requires the \moderncvcolor to be issued BEFORE \moderncvstyle.
+
 version 2.3.1 (2022-02-21)
 - Fix duplicate GitLab icon (#105)
 - Revert using detokenize in social links (#97)
