@@ -24,6 +24,12 @@
 \DeclareOption{center}       {\edef\moderncvstylebodyoptions{\moderncvstylebodyoptions,center}}
 \DeclareOption{right}        {\edef\moderncvstylebodyoptions{\moderncvstylebodyoptions,right}}
 
+% head options
+\@initializecommand{\moderncvstyleheadoptions}{}
+\@initializeif{\if@datainhead}\@datainheadtrue
+\DeclareOption{details}{\edef\moderncvstyleheadoptions{\moderncvstyleheadoptions,details}}
+\DeclareOption{nodetails}{\@datainheadfalse\edef\moderncvstyleheadoptions{\moderncvstyleheadoptions,nodetails}}
+
 % toggle use of symbol fonts.
 \@initializeif{\if@symbols}\@symbolsfalse
 \DeclareOption{symbols}      {\@symbolstrue}
@@ -65,9 +71,14 @@
 %-------------------------------------------------------------------------------
 %                header, body & footer
 %-------------------------------------------------------------------------------
-\moderncvhead{3}
+\moderncvhead[\moderncvstyleheadoptions]{3}
 \moderncvbody[\moderncvstylebodyoptions]{3}
 
+\if@datainhead
+% if data is shown in head, do not include the footer
+\else
+  \moderncvfoot{1}
+\fi
 
 \endinput
 
