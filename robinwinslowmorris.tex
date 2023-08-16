@@ -1,0 +1,215 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\footskip}{54.40001pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+\setlength{\hintscolumnwidth}{2.7cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{Robin}{Winslow Morris}
+\title{Engineering manager; MSc Interactive Systems Design}
+\address{Bicester, UK}
+\phone[mobile]{07795070704}
+\email{robin@robinwinslow.co.uk}
+\homepage{robinwinslow.uk}
+
+% Social icons
+\social[linkedin]{robin-winslow-morris}
+\social[github]{nottrobin}
+%\social[stackoverflow]{613540/robin-winslow}
+
+% Style links
+\usepackage{hyperref,soul}
+\setulcolor{lightgray}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\hrefstyle{#2}}}
+\newcommand{\hrefstyle}[1]{\ul{\mbox{#1}}}
+
+%\extrainfo{}
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{}
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\setlength{\parskip}{4pt}
+
+Over 18 years in software engineering, I've designed and developed high performing full-stack web services and APIs across many languages and technologies including Python (Flask/Django), PostgreSQL, MongoDB and K8s. I've evolved and implemented continuous delivery pipelines and evolved team standards.
+
+\par
+
+As a manager, I've formed, led and grown high performing engineering teams with high retention and strong engineering culture. I've designed roles and team structures, improved team interactions, resolved conflicts and worked closely with stakeholders and product owners at all levels.
+
+\par
+
+I've been an active open-source contributor, publishing many open source projects and modules. I've mentored engineers, given many presentations on technical and non-technical topics, including at conferences and international company events, and written many blog posts and an academic journal paper.
+
+\setlength{\parskip}{0pt}
+
+\section{Experience}
+
+\cventry{Since June 2022}{Head web architect}{Canonical}{}{}{\begin{itemize}
+\item Systems architect for the web engineering department
+\item Designed guiding templates for Python (Flask \& Django) sites \& APIs, React and static sites
+\item Mentored the 30 developers across the department
+\item Created and led a new \href{https://platformengineering.org/blog/what-is-platform-engineering}{platform engineering} squad responsible for central modules, development and devops tooling to support our 30+ website and API projects
+\item Guided eight development squads, leading key architectural decisions across the whole department
+\item Led team standards for communication, simplicity, testing, usability, CD, accessibility \& sustainability
+\item Ensured key documentation was written and shared
+\item \href{https://devm.io/devops/devops-shifting-left-172792}{Shifted responsibilities left}, and improved team efficiency through automation
+\end{itemize}}
+
+\cventry{2017 to 2022}{Manager and team leader}{Canonical}{}{}{\begin{itemize}
+  \item 8 direct reports with record retention \& progression across UK, Canada, Poland and spain
+  \item Designed agile processes \& team architectures
+  \item Resolved conflicts between people and between  teams
+  \item Presented features and roadmaps at international company events
+  \item Worked closely with stakeholders and product owners at all levels of the company
+  \item Built team culture through \href{https://www.youtube.com/watch?v=nLGkKgu3z0M}{presenting}, writing, mentoring and leading by example
+  \item Practised and advocated for respectful leadership principles
+  \item Managed relationships and resolved conflicts with senior stakeholders
+  \item Open source \& ethics thought-leader
+\end{itemize}}
+
+\cventry{2014 to 2017}{Lead developer}{Canonical}{}{}{\begin{itemize}
+  \item Transformed hosting for ubuntu.com (up to 10k hits/sec), eliminating regular outages
+  \item Transformed continuous deployment pipeline for 30+ sites with K8s
+  \item Transitioned the team to GitHub, and designed project structure standards
+  \item Took a leading role in team structure and practices
+\end{itemize}}
+
+\cventry{2012 to 2014}{Lead developer}{\href{https://www.hillarys.co.uk/}{Hillarys}}{}{}{Led development on 4 e-commerce sites including \href{https://www.web-blinds.com/}{web-blinds.com} in PHP (Magento and MySQL) and C\# (Umbraco and MSSQL Server), and led the team to double in size.}
+
+\cventry{2010 to 2012}{Full-stack developer}{\href{https://en.wikipedia.org/wiki/TI_Media}{IPC Media}}{}{}{Key member of a 4-dev agile squad for 4 magazine sites including horse and hound and country life, within a department of 50 devs.}
+
+\cventry{2005 to 2010}{Lead developer}{\href{https://www.energise.com/}{Energise}, \href{https://mokoro.co.uk/}{Mokoro} and Tamar}{}{}{\href{https://en.wikipedia.org/wiki/The_Year_in_Industry}{Year in Industry} at Tamar as a Perl \& CSS dev. Then dev, software and visual design consultant work for Tamar, Mokoro and Enterprise.}
+
+\section{Notable projects}
+
+\cvitem{}{Projects where I had a leading role in both design and implementation:}
+
+\subsection{Software design}
+
+\cventry{2015 to 2022}{Modular architecture templates}{}{}{}{Architected the model structures for our 30+ Flask, Django and static sites, including designing our branching \& testing models, GitOps CI configuration \& suite of Python \& Node modules.}
+
+\cventry{2019 to 2021}{Cross-team API model}{}{}{}{Many sites follow a standard \href{https://en.wikipedia.org/wiki/Domain-driven_design}{DDD}-based API structure for the contractual relationship between the web department and engineering teams.}
+
+\cventry{2015}{\href{https://github.com/canonical/assets.ubuntu.com}{Assets server}}{}{}{}{A cache-optimised, high-load, REST based server for hosting images and files for all sites. Served gigabites of assets for all of Canonical's digital services for 8 years with minimal changes without no outages.}
+
+\cventry{2019 to 2021}{\href{https://ubuntu.com/security/api/docs}{Security API}}{(~100k hits/sec)}{}{}{Ubuntu's official public API for CVEs and Ubuntu security notices for security researchers across the world. Updated by Canonical's security team, it serves security data for all Ubuntu users to check vulnerability information.}
+
+\cventry{2015 to 2020}{\href{https://vanillaframework.io/}{Vanilla} Sass design system}{}{}{}{A central styling framework, written in SASS, for unifying design components, branding and styling code standards across the company's many branding areas. I helped design the technical architecture as well as the update and collaboration models.}
+
+\subsection{Platform engineering}
+
+
+\cventry{2019 to 2023}{Central hosting platform}{(~2k hits/sec)}{}{}{Advocated for, designed \& implemented a Kubernetes-based reliable high-capacity platform for Canonical's 30+ websites and services including ubuntu.com.}
+
+\cventry{2018 to 2023}{Web deployment platform}{}{}{}{Automatic continuous deployments with GitOps and Kubernetes to release changes to 30+ sites \& APIs within 5 minutes of merges to main.}
+
+\cventry{2017 to 2023}{PR demo system}{}{}{}{Automatic, unique, reliable demo for every pull request, deployed into Kubernetes with close parity with production. Enables quick, reliable staging, testing, QA and stakeholder review.}
+
+\cventry{2015 to 2021}{\href{https://github.com/canonical/dotrun}{Dotrun} local development system}{}{}{}{A container-based tool to unify and simplify local development of our 100+ projects on both macOS and Linux systems.}
+
+\subsection{Team building}
+
+\cventry{2022 to 2023}{Hiring assessments}{}{}{}{Carefully designed custom early-stage assessments to optimise testing relevant skills and maximising the time of both team members and candidates.}
+\cventry{2019 to 2021}{\href{https://www.youtube.com/playlist?list=PL-qBHd6_LXWYuhumYlmR7NZeytr7qLPj0}{Masterclasses}}{}{}{}{Delivered and led fortnightly department-wide skills-sharing presentations on diverse topics.}
+\cventry{2019 to 2021}{\href{https://webteam.canonical.com/practices}{Team practices}}{}{}{}{A website, repository and system for discussing and agreeing on formal team standards and principles. A bedrock of department culture and discipline.}
+
+\section{Education}
+
+\cventry{2007 to 2010}{MSc Interactive Systems Design}{\href{http://nottingham.ac.uk}{Nottingham}}{UK}{}{\begin{itemize}
+  \item Learned to study and design solutions for large interacting socio-technical systems
+  \item Studied cognitive systems interaction, usability and mobile design principles
+  \item How to conduct and learn from social and user studies
+  \item Published \href{https://www.tandfonline.com/doi/abs/10.1080/00140139.2012.723140}{a journal paper} on micro-generation schemes
+\end{itemize}}
+
+\cventry{2004 to 2007}{BSc Computer Science}{\href{http://nottingham.ac.uk}{Nottingham}}{UK}{}{Studied functional programming, set theory, advanced logic, database normalisation, big O notation, algorithms \& data structures, object oriented programming, unix systems, security principles, Java, Haskell, C++ and project management.}
+
+\section{Publishing \& presenting}
+
+\cventry{April 2022}{\href{https://m.youtube.com/watch?v=nLGkKgu3z0M&t=7s}{Open source and its social impact}}{}{}{}{Presentation to the department with Anthony Dillon, published on YouTube}
+\cventry{2018 to 2023}{Presented 10 masterclasses to the department}{}{}{}{On many topics including: Advanced Git usage, \href{https://robinwinslow.uk/pragmatic-testing}{effective testing}, \href{https://robinwinslow.uk/expressive-coding}{readable code}, \href{https://robinwinslow.uk/regex}{regex}, systems design, writing and platform engineering}
+\cventry{2014 to 2021}{\href{https://ubuntu.com/blog/author/nottrobin}{22 posts on the Ubuntu blog}}{}{}{}{About our working practices \& tools, configuring NGINX, running Ubuntu and many other topics}
+\cventry{2012 to 2023}{Over 100 personal blog posts}{}{}{}{\href{https://stackexchange.com/users/304176/robin-winslow}{On StackOverflow}}
+\cventry{2011 to 2021}{100s technical answers and questions}{}{}{}{Across \href{https://stackexchange.com/users/304176/robin-winslow}{StackExchange sites}}
+\cventry{2012}{\href{https://www.tandfonline.com/doi/abs/10.1080/00140139.2012.723140}{Micro-generation schemes: user behaviours and attitudes towards energy consumption}}{}{}{}{Journal paper in Ergonomics}
+\cventry{2012}{\href{https://prezi.com/vwrbwbhbwt2m/html5-and-how-to-use-it/}{HTML5 and how to use it}}{}{}{}{Presentation to IPC Media's digital department}
+\cventry{2011}{\href{https://prezi.com/-eq7oqt-i3cs/lets-talk-about-css/}{Let’s talk about CSS}}{}{}{}{Presentation to IPC Media's digital department}
+
+\section{Open source contributions}
+
+\setlength{\parskip}{4pt}
+
+\cvitem{}{I have created \href{https://pypi.org/user/nottrobin/}{32 Python packages}, \href{https://www.npmjs.com/~nottrobin}{23 NPM packages}, \href{https://github.com/nottrobin?tab=repositories&q=&type=source&language=&sort=}{138 GitHub repositories} and \href{https://gist.github.com/nottrobin}{151 public gists}.}
+
+\cvitem{}{As well as all Canonical’s websites, services and supporting modules and tools, I’ve contributed to many OSS projects across Canonical including \href{https://github.com/canonical/microk8s}{MicroK8S}, \href{https://github.com/canonical/lxd}{LXD}, \href{https://github.com/snapcore/snapcraft}{Snapcraft}, \href{https://github.com/snapcore/snapd}{snapd}, \href{https://github.com/juju/juju}{Juju} (including various Charms), \href{https://mojo.canonical.com/}{Mojo}, \href{https://github.com/anbox-cloud}{Anbox-cloud}, \href{https://github.com/canonical-ols/talisker}{Talisker} (a \href{https://gunicorn.org/}{Gunicorn} wrapper) and \href{https://github.com/howbazaar/discli}{discli} (a Discourse API client).}
+
+\cvitem{}{Beyond Canonical, I’ve directly contributed code to many projects including \href{https://github.com/nginxinc/docker-nginx/issues/377}{docker-nginx}, \href{https://github.com/kubernetes/ingress-nginx}{Kubernetes' NGINX Ingress controller}, \href{https://github.com/pypa/pipenv}{Pipenv}, \href{https://github.com/python-poetry/poetry}{poetry}, \href{https://github.com/sass/node-sass}{node-sass}, \href{https://github.com/sasstools/sass-lint}{sass-lint}, \href{https://github.com/tj/git-extras}{git-extras}, \href{https://github.com/sphinx-doc/sphinx}{Sphinx}, \href{https://github.com/renovatebot/renovate}{Renovate} and \href{https://github.com/lando/lando}{Lando}, and helped improve many more projects through community suggestions and discussions, including \href{https://kubernetes.io/}{Kubernetes}, \href{https://www.nginx.com/}{NGINX}, \href{https://www.python.org/}{Python} and \href{https://www.discourse.org/}{Discourse}.}
+
+\setlength{\parskip}{0pt}
+
+\section{Key skills}
+
+\cvitem{Languages \& frameworks}{Python (\href{https://flask.palletsprojects.com/en/2.3.x/}{Flask}, \href{https://www.djangoproject.com/}{Django}), PHP (\href{https://symfony.com/}{Symfony}), C\# (\href{https://umbraco.com/}{Umbraco}), Bash, JavaScript (\href{https://react.dev/}{React}, \href{https://backbonejs.org/}{Backbone}, \href{https://jquery.com/}{jQuery}), Typescript, Node (\href{https://expressjs.com/}{Express}), Perl (\href{http://catalyst.perl.org/}{Catalyst})}
+
+\cvitem{Software \& platforms}{\href{https://kubernetes.io/}{Kubernetes}, \href{https://www.postgresql.org/}{PostgreSQL}, \href{https://redis.io/}{Redis}, \href{https://www.mongodb.com/}{MongoDB}, \href{https://www.nginx.com/}{NGINX}, \href{https://httpd.apache.org/}{Apache}, \href{https://www.jenkins.io/}{Jenkins}, \href{https://sentry.io/welcome/}{Sentry}, \href{https://graylog.org/}{Graylog}, \href{https://grafana.com/}{Grafana}, \href{https://chat.openai.com/auth/login}{ChatGPT}, \href{https://git-scm.com/}{Git}, \href{https://github.com/features/actions}{GitHub Actions}, \href{https://www.openstack.org/}{Openstack}, \href{https://aws.amazon.com/}{AWS}, \href{https://cloud.google.com/?hl=en}{GCP}}
+
+\cvitem{Theory \& best practice}{\href{https://www.investorsinpeople.com/knowledge/no-blame-culture-actually-look-like/}{No-blame culture}, \href{https://www.northstarmeetingsgroup.com/Incentive/Strategy/Respectful-leadership-not-micromanagement}{Respectful leadership}, \href{https://en.wikipedia.org/wiki/Behavior-driven_development}{Behaviour-driven development}, \href{https://en.wikipedia.org/wiki/Minimum_viable_product}{Minimum-viable product}, \href{https://continuousdelivery.com/}{Continuous delivery}, \href{https://en.wikipedia.org/wiki/KISS_principle}{KISS}, \href{https://en.wikipedia.org/wiki/KISS_principle}{YAGNI}, progressive design, \href{https://platformengineering.org/blog/what-is-platform-engineering}{platform engineering}, \href{https://12factor.net/}{the 12 factor app}, \href{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}{progressive web apps}}
+
+\end{document}
+
+
+%% end of file `template.tex'.
