@@ -2,4 +2,4 @@
 
 rm -f robinwinslowmorris.pdf
 latexmk -pdf ./robinwinslowmorris.tex -f
-xdg-open robinwinslowmorris.pdf
+xdg-open robinwinslowmorris.pdf || open robinwinslowmorris.pdf
